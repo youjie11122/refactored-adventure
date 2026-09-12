@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page="zengli-profile" data-edit-version="">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>曾理 · 首席拓展培训师</title>
+<meta name="description" content="曾理，首席拓展培训师。特警支队出身，安徽省国际武术节个人短兵器第二名，川藏线独自骑行12000公里。深耕企业凝聚力团建、管理层赋能与趣味运动会，累计培训近四万人次。">
+<link rel="preload" as="image" href="assets/zengli-portrait.jpg">
+<style>
+:root{
+  --bg:#eef0f2;
+  --bg-2:#f7f8f9;
+  --panel:#ffffff;
+  --panel-2:#f2f4f6;
+  --ink:#10151a;
+  --body:#3c454e;
+  --muted:#78828c;
+  --accent:#d9490f;
+  --accent-deep:#a83509;
+  --accent-tint:#fbe7dd;
+  --steel:#2f3d4a;
+  --steel-tint:#e3e8ec;
+  --line:#d5dae0;
+  --line-soft:#e4e8ec;
+  --display:"Impact","Arial Black","DIN Condensed","Arial Narrow",sans-serif;
+  --mono:"Courier New",Consolas,monospace;
+  --cjk:"PingFang SC","Microsoft YaHei","Source Han Sans SC","Noto Sans SC",sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--body);
+  font-family:var(--cjk);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+/* 背景纹理：细网格 + 斜向条纹，工业制图感 */
+body::before{
+  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    linear-gradient(rgba(47,61,74,.045) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(47,61,74,.045) 1px,transparent 1px);
+  background-size:40px 40px;
+  -webkit-mask-image:radial-gradient(1100px 700px at 80% 12%, #000 0%, transparent 72%);
+  mask-image:radial-gradient(1100px 700px at 80% 12%, #000 0%, transparent 72%);
+}
+.wrap{position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:0 28px}
+
+/* ================= 顶部导航 ================= */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  background:rgba(247,248,249,.9);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.nav-in{max-width:1180px;margin:0 auto;padding:0 28px;height:64px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px}
+.brand .logo{
+  font-family:var(--display);font-size:20px;letter-spacing:2px;color:#fff;
+  background:var(--accent);padding:3px 10px;
+}
+.brand .logo-cn{font-size:14px;color:var(--body);letter-spacing:1px;font-weight:600}
+.nav-links{display:flex;gap:4px}
+.nav-links a{
+  color:var(--muted);text-decoration:none;font-size:13px;letter-spacing:1px;
+  padding:6px 14px;border:1px solid transparent;transition:.18s;
+}
+.nav-links a:hover{color:var(--accent);border-color:var(--line);background:var(--panel)}
+@media(max-width:820px){.nav-links{display:none}}
+
+/* ================= 通用 ================= */
+section{padding:92px 0}
+section[id],header[id]{scroll-margin-top:76px}
+.kicker{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--mono);font-size:11px;letter-spacing:3px;color:var(--accent);
+  text-transform:uppercase;margin-bottom:16px;
+}
+.kicker::before{content:"";width:26px;height:3px;background:var(--accent)}
+h2.sec{
+  font-size:34px;font-weight:800;letter-spacing:.5px;color:var(--ink);
+  line-height:1.25;padding-left:18px;border-left:6px solid var(--accent);
+}
+h2.sec .en{
+  display:block;font-family:var(--display);font-size:14px;letter-spacing:5px;
+  color:var(--muted);text-transform:uppercase;margin-bottom:10px;font-weight:400;
+}
+.sec-note{color:var(--muted);font-size:15px;max-width:660px;margin-top:16px}
+
+/* 危险条纹分隔 */
+.hazard{height:8px;background:repeating-linear-gradient(45deg,var(--steel) 0 12px,var(--accent) 12px 24px)}
+
+/* ================= HERO ================= */
+.hero{
+  min-height:100vh;display:flex;align-items:center;padding:112px 0 72px;
+  position:relative;background:var(--bg-2);
+  border-bottom:1px solid var(--line);
+}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:center;width:100%}
+.rank{
+  display:inline-flex;align-items:center;gap:10px;padding:6px 14px;
+  background:var(--ink);color:#fff;font-family:var(--mono);
+  font-size:11px;letter-spacing:3px;text-transform:uppercase;
+}
+.rank .dot{width:7px;height:7px;background:var(--accent)}
+.hero h1{
+  font-size:84px;font-weight:900;line-height:1;letter-spacing:1px;
+  margin:24px 0 0;color:var(--ink);
+}
+.hero h1 .en{
+  display:block;font-family:var(--display);font-size:20px;font-weight:400;
+  letter-spacing:9px;color:var(--muted);margin-top:16px;
+}
+.hero-title{
+  font-size:25px;font-weight:800;color:var(--accent);letter-spacing:3px;
+  margin:14px 0 16px;
+}
+.hero-tag{color:var(--body);font-size:16px;max-width:520px;margin-bottom:32px}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;padding:13px 26px;
+  font-size:14px;letter-spacing:2px;text-decoration:none;transition:.18s;
+  border:2px solid var(--ink);
+}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:700}
+.btn.primary:hover{background:var(--accent-deep);border-color:var(--accent-deep)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:#fff}
+
+/* 照片档案卡 */
+.hero-side{max-width:400px;margin-left:auto}
+.photo-card{background:var(--panel);border:1px solid var(--line);padding:12px}
+.photo-card .bar{height:10px;background:repeating-linear-gradient(45deg,var(--steel) 0 10px,var(--accent) 10px 20px);margin:-12px -12px 12px}
+.photo-card .shot{position:relative;overflow:hidden;background:var(--steel-tint)}
+.photo-card .shot img{display:block;width:100%;height:auto}
+.photo-card .shot::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  box-shadow:inset 0 0 0 1px rgba(16,21,26,.14);
+}
+.photo-card .plate{
+  display:flex;align-items:baseline;justify-content:space-between;gap:12px;
+  padding:12px 4px 2px;border-top:1px solid var(--line-soft);margin-top:12px;
+}
+.photo-card .plate .n{font-size:17px;font-weight:800;color:var(--ink);letter-spacing:2px}
+.photo-card .plate .r{font-family:var(--mono);font-size:11px;letter-spacing:2px;color:var(--muted);text-transform:uppercase}
+
+/* 数据条 */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:14px;border:1px solid var(--line);background:var(--panel)}
+.stat{padding:16px 14px;border-right:1px solid var(--line-soft)}
+.stat:last-child{border-right:0}
+.stat .num{font-family:var(--display);font-size:30px;line-height:1;color:var(--accent)}
+.stat .num small{font-size:13px;color:var(--muted);letter-spacing:1px}
+.stat .lab{font-size:11px;color:var(--muted);letter-spacing:1px;margin-top:7px}
+@media(max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:36px}
+  .hero h1{font-size:58px}
+  .hero-side{max-width:420px;margin:0 auto}
+}
+@media(max-width:560px){
+  .hero h1{font-size:44px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .stat:nth-child(2){border-right:0}
+  .stat:nth-child(1),.stat:nth-child(2){border-bottom:1px solid var(--line-soft)}
+}
+
+/* ================= 资质 ================= */
+.badges{background:var(--bg-2);border-bottom:1px solid var(--line)}
+.badges-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(238px,1fr));gap:14px;margin-top:40px}
+.badge{
+  position:relative;padding:20px 20px 20px 24px;background:var(--panel);
+  border:1px solid var(--line);border-left:4px solid var(--steel);
+  transition:transform .2s,border-left-color .2s,box-shadow .2s;
+}
+.badge:hover{transform:translateY(-3px);border-left-color:var(--accent);box-shadow:0 8px 22px rgba(16,21,26,.07)}
+.badge .idx{font-family:var(--display);font-size:13px;color:var(--accent);letter-spacing:2px}
+.badge .name{font-size:16px;font-weight:700;color:var(--ink);margin-top:8px;line-height:1.5}
+.badge .tag{font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;margin-top:7px}
+
+/* ================= 履历 ================= */
+.timeline{margin-top:44px;position:relative}
+.timeline::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:var(--line)}
+.tl-item{position:relative;padding:0 0 32px 46px}
+.tl-item::before{
+  content:"";position:absolute;left:0;top:7px;width:16px;height:16px;
+  background:var(--panel);border:3px solid var(--accent);
+}
+.tl-item .yr{font-family:var(--display);font-size:15px;color:var(--steel);letter-spacing:2px}
+.tl-item .t{font-size:18px;font-weight:800;color:var(--ink);margin:4px 0 5px}
+.tl-item .d{color:var(--muted);font-size:14px;max-width:720px}
+
+/* ================= 擅长 ================= */
+.caps{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:40px}
+.cap{
+  background:var(--panel);border:1px solid var(--line);
+  padding:24px 22px;display:flex;gap:16px;transition:border-color .2s,transform .2s;
+}
+.cap:hover{border-color:var(--accent);transform:translateY(-2px)}
+.cap .no{
+  font-family:var(--display);font-size:28px;line-height:1;min-width:42px;
+  color:var(--accent);
+}
+.cap .t{font-size:17px;font-weight:800;color:var(--ink);margin-bottom:5px}
+.cap .d{color:var(--muted);font-size:14px}
+.cap.business{background:var(--panel-2)}
+.cap.business .no{color:var(--steel)}
+@media(max-width:760px){.caps{grid-template-columns:1fr}}
+
+/* ================= 带训企业 ================= */
+.clients{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.client-group{
+  margin-top:16px;padding:20px 24px;background:var(--panel);
+  border:1px solid var(--line);border-left:5px solid var(--accent);
+  display:grid;grid-template-columns:150px 1fr;gap:20px;align-items:baseline;
+}
+.client-group .g-name{font-family:var(--mono);font-size:12px;letter-spacing:2px;color:var(--steel);text-transform:uppercase}
+.client-group .g-list{color:var(--ink);font-size:16px;line-height:2}
+.client-group .g-list b{color:var(--accent);font-weight:700}
+.client-total{margin-top:26px;font-size:15px;color:var(--body)}
+.client-total b{color:var(--accent);font-family:var(--display);font-size:19px;letter-spacing:1px}
+@media(max-width:760px){.client-group{grid-template-columns:1fr;gap:6px}}
+
+/* ================= 口号 ================= */
+.quote{padding:110px 0;text-align:center;background:var(--bg-2);border-bottom:1px solid var(--line)}
+.quote .mark{font-family:var(--display);font-size:100px;line-height:.8;color:var(--accent);opacity:.28}
+.quote p{
+  font-size:26px;font-weight:800;color:var(--ink);line-height:1.7;
+  max-width:1000px;margin:14px auto 0;letter-spacing:.5px;
+}
+.quote p .em{color:var(--accent)}
+@media(max-width:760px){.quote p{font-size:19px}}
+
+/* ================= 课型现场 ================= */
+.scenes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.scene{margin:0;background:var(--panel);border:1px solid var(--line);padding:10px;transition:border-color .25s ease,transform .25s ease}
+.scene:hover{border-color:var(--accent);transform:translateY(-3px)}
+.scene .bar{height:8px;background:repeating-linear-gradient(45deg,var(--steel) 0 10px,var(--accent) 10px 20px);margin:-10px -10px 10px}
+.scene .shot{position:relative;overflow:hidden;background:var(--steel-tint);aspect-ratio:4/3}
+.scene .shot img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
+.scene:hover .shot img{transform:scale(1.05)}
+.scene figcaption{display:flex;flex-direction:column;gap:6px;padding:14px 2px 4px}
+.scene .sno{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:2px;color:var(--accent)}
+.scene .st{font-size:16px;font-weight:800;color:var(--ink)}
+.scene .sd{font-size:13px;line-height:1.75;color:var(--muted)}
+@media(max-width:900px){.scenes{grid-template-columns:1fr;gap:14px}}
+.footer{padding:26px 0 48px;text-align:center;color:var(--muted);font-size:12px;letter-spacing:1px;background:var(--panel)}
+
+/* ================= 动效 ================= */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto}
+  .reveal{opacity:1;transform:none}
+}
+
+/* ================= 编辑工具 ================= */
+.edit-hotzone{position:fixed;top:0;left:0;z-index:9999;width:84px;height:64px}
+.edit-toggle{
+  position:absolute;top:10px;left:10px;padding:7px 12px;font-size:12px;letter-spacing:1px;
+  background:var(--ink);color:#fff;border:0;cursor:pointer;
+  opacity:0;transition:opacity .2s;
+}
+.edit-hotzone:hover .edit-toggle,.edit-toggle:focus-visible{opacity:1}
+.edit-panel{
+  position:fixed;top:12px;left:12px;z-index:9998;display:none;align-items:center;gap:12px;
+  padding:8px 12px;background:var(--ink);border:1px solid var(--ink);
+  font-size:12px;color:#c9d1d8;
+}
+.edit-panel.show{display:flex}
+.edit-panel .hint{letter-spacing:1px}
+.edit-panel button{padding:5px 12px;font-size:12px;background:var(--accent);color:#fff;border:0;cursor:pointer;font-weight:700}
+.edit-flash{
+  position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(10px);z-index:9999;
+  background:var(--accent);color:#fff;padding:9px 18px;font-size:13px;font-weight:700;
+  opacity:0;transition:.3s;
+}
+.edit-flash.show{opacity:1;transform:translateX(-50%)}
+[data-edit-id]{outline:0;transition:outline-color .15s}
+body.editing-mode [data-edit-id]{outline:1px dashed rgba(217,73,15,.55);cursor:text}
+body.editing-mode [data-edit-id]:hover{outline-color:var(--accent)}
+@media print{
+  .edit-hotzone,.edit-panel,.edit-flash,.nav{display:none!important}
+  .reveal{opacity:1!important;transform:none!important}
+  body::before{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- 顶部导航 -->
+<nav class="nav">
+  <div class="nav-in">
+    <div class="brand">
+      <span class="logo">ZL</span>
+      <span class="logo-cn">曾理 · 拓展培训师</span>
+    </div>
+    <div class="nav-links">
+      <a href="#about">资质</a>
+      <a href="#timeline">履历</a>
+      <a href="#skills">擅长</a>
+      <a href="#clients">带训</a>
+      <a href="#field">现场</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="rank" data-edit-id="hero-rank"><span class="dot"></span>硬核实战 · 特警出身</span>
+      <h1>
+        <span data-edit-id="hero-name">曾理</span>
+        <span class="en">ZENG LI</span>
+      </h1>
+      <div class="hero-title" data-edit-id="hero-title">首席拓展培训师</div>
+      <p class="hero-tag" data-edit-id="hero-tagline">特警出身、武术夺牌的硬核拓展培训师，用实战与体能把团队淬炼成一支能打硬仗的队伍。</p>
+      <div class="hero-cta">
+        <a class="btn primary" href="#field" data-edit-id="hero-cta1">预约带训</a>
+        <a class="btn ghost" href="#timeline" data-edit-id="hero-cta2">查看实战履历</a>
+      </div>
+    </div>
+    <div class="hero-side">
+      <div class="photo-card">
+        <div class="bar"></div>
+        <div class="shot">
+          <img src="assets/zengli-portrait.jpg" alt="曾理在职工趣味运动会现场持麦带训" width="900" height="1200" decoding="async">
+        </div>
+        <div class="plate">
+          <span class="n" data-edit-id="photo-name">曾理</span>
+          <span class="r" data-edit-id="photo-role">现场带训 / 长沙</span>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="num" data-edit-id="stat-height">177<small>CM</small></div><div class="lab">身高</div></div>
+        <div class="stat"><div class="num" data-edit-id="stat-weight">89<small>KG</small></div><div class="lab">体重</div></div>
+        <div class="stat"><div class="num" data-edit-id="stat-ride">12000<small>KM</small></div><div class="lab">川藏独骑</div></div>
+        <div class="stat"><div class="num" data-edit-id="stat-people">40000<small>+</small></div><div class="lab">培训人次</div></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="hazard"></div>
+
+<!-- 资质 -->
+<section class="badges" id="about">
+  <div class="wrap">
+    <div class="kicker reveal">CREDENTIALS / 资质认证</div>
+    <h2 class="sec reveal"><span class="en">QUALIFICATION</span><span data-edit-id="sec-about">七项专业资质</span></h2>
+    <p class="sec-note reveal" data-edit-id="sec-about-note">从特警实战到企业赋能，每一项资质背后都是实打实的训练与考核。</p>
+    <div class="badges-grid">
+      <div class="badge reveal"><div class="idx">01</div><div class="name" data-edit-id="bd1">企业高级培训师</div><div class="tag">Corporate Trainer</div></div>
+      <div class="badge reveal"><div class="idx">02</div><div class="name" data-edit-id="bd2">中国青少年夏令营高级教练</div><div class="tag">Youth Camp Coach</div></div>
+      <div class="badge reveal"><div class="idx">03</div><div class="name" data-edit-id="bd3">红十字协会救护指导员</div><div class="tag">Red Cross Instructor</div></div>
+      <div class="badge reveal"><div class="idx">04</div><div class="name" data-edit-id="bd4">经纬星球网红机构高级讲师</div><div class="tag">Senior Lecturer</div></div>
+      <div class="badge reveal"><div class="idx">05</div><div class="name" data-edit-id="bd5">家庭教育高级指导师</div><div class="tag">Family Educator</div></div>
+      <div class="badge reveal"><div class="idx">06</div><div class="name" data-edit-id="bd6">中国体验式联盟高级培训师</div><div class="tag">Experiential Trainer</div></div>
+      <div class="badge reveal"><div class="idx">07</div><div class="name" data-edit-id="bd7">中国企业注册教练（RCC）</div><div class="tag">Registered Corporate Coach</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 履历 -->
+<section id="timeline">
+  <div class="wrap">
+    <div class="kicker reveal">MISSION LOG / 行动记录</div>
+    <h2 class="sec reveal"><span class="en">EXPERIENCE</span><span data-edit-id="sec-timeline">实战履历</span></h2>
+    <div class="timeline">
+      <div class="tl-item reveal"><div class="yr">2013 — 2015</div><div class="t" data-edit-id="tl1-t">任职岳阳市特警支队</div><div class="d" data-edit-id="tl1-d">从特警部队起步，练就过硬的身体素质与纪律意识。</div></div>
+      <div class="tl-item reveal"><div class="yr">2015</div><div class="t" data-edit-id="tl2-t">安徽省国际武术节 · 个人短兵器第二名</div><div class="d" data-edit-id="tl2-d">以实战武术功底站上领奖台。</div></div>
+      <div class="tl-item reveal"><div class="yr">2016</div><div class="t" data-edit-id="tl3-t">深圳蛇口东角头边防站 · 特训教官</div><div class="d" data-edit-id="tl3-d">受聘边防站，担任特训教官。</div></div>
+      <div class="tl-item reveal"><div class="yr">2018</div><div class="t" data-edit-id="tl4-t">转型拓展培训 · 户外领队 / 拓展教官</div><div class="d" data-edit-id="tl4-d">开始从事户外领队、野外生存、体能训练、基础格斗与拓展教官工作。</div></div>
+      <div class="tl-item reveal"><div class="yr">2018.09</div><div class="t" data-edit-id="tl5-t">红十字救护员（三年持有）证</div><div class="d" data-edit-id="tl5-d">通过湖南省红十字协会考核，获得救护员资质。</div></div>
+      <div class="tl-item reveal"><div class="yr">2019</div><div class="t" data-edit-id="tl6-t">川藏线 · 全程独自骑行 12000 公里</div><div class="d" data-edit-id="tl6-d">代表长沙骑行协会，独自完成川藏线全程骑行。</div></div>
+      <div class="tl-item reveal"><div class="yr">2021</div><div class="t" data-edit-id="tl7-t">长沙市蓝天救援队 · 公益队员</div><div class="d" data-edit-id="tl7-d">疫情期间加入，参与公益消杀防护、小区执勤等工作。</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 擅长 -->
+<section id="skills" style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="kicker reveal">CAPABILITY / 能力范围</div>
+    <h2 class="sec reveal"><span class="en">SKILLS</span><span data-edit-id="sec-skills">擅长领域</span></h2>
+    <div class="caps">
+      <div class="cap reveal"><div class="no">01</div><div><div class="t" data-edit-id="cap1-t">体能特训</div><div class="d" data-edit-id="cap1-d">以特警级体能标准打造高强度训练方案。</div></div></div>
+      <div class="cap reveal"><div class="no">02</div><div><div class="t" data-edit-id="cap2-t">基础格斗</div><div class="d" data-edit-id="cap2-d">武术节获奖功底，传授实用防身与搏击基础。</div></div></div>
+      <div class="cap reveal"><div class="no">03</div><div><div class="t" data-edit-id="cap3-t">野外求生</div><div class="d" data-edit-id="cap3-d">户外领队出身，覆盖野外生存全场景教学。</div></div></div>
+      <div class="cap reveal"><div class="no">04</div><div><div class="t" data-edit-id="cap4-t">紧急救护</div><div class="d" data-edit-id="cap4-d">红十字救护员资质，为团队活动安全兜底。</div></div></div>
+      <div class="cap business reveal"><div class="no">A</div><div><div class="t" data-edit-id="capb1-t">企业凝聚力团建</div><div class="d" data-edit-id="capb1-d">把散沙式的团队拧成一股绳。</div></div></div>
+      <div class="cap business reveal"><div class="no">B</div><div><div class="t" data-edit-id="capb2-t">新人融入拓展</div><div class="d" data-edit-id="capb2-d">让新成员快速破冰、建立信任。</div></div></div>
+      <div class="cap business reveal"><div class="no">C</div><div><div class="t" data-edit-id="capb3-t">管理层凝聚力赋能</div><div class="d" data-edit-id="capb3-d">针对管理层设计高强度的领导力训练。</div></div></div>
+      <div class="cap business reveal"><div class="no">D</div><div><div class="t" data-edit-id="capb4-t">趣味运动会</div><div class="d" data-edit-id="capb4-d">在竞技与欢乐中激发团队斗志。</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 课型现场 -->
+<section id="field">
+  <div class="wrap">
+    <div class="kicker reveal">IN THE FIELD / 课型现场</div>
+    <h2 class="sec reveal"><span class="en">SCENES</span><span data-edit-id="sec-field">训练现场</span></h2>
+    <p class="sec-note reveal" data-edit-id="sec-field-note">四种课型的现场切面——体能、野外、团队，训练强度与安全边界都在这套标准里。</p>
+    <div class="scenes">
+      <figure class="scene reveal">
+        <div class="bar"></div>
+        <div class="shot"><img src="assets/zengli-scene-1.jpg" alt="两名背包徒步者在高山草甸山径上行进" width="800" height="600" loading="lazy" decoding="async"></div>
+        <figcaption>
+          <span class="sno">01 / FIELD</span>
+          <span class="st" data-edit-id="sc1-t">野外求生 · 户外领队</span>
+          <span class="sd" data-edit-id="sc1-d">山地路线勘选、野外生存技能教学，覆盖户外场景全流程。</span>
+        </figcaption>
+      </figure>
+      <figure class="scene reveal">
+        <div class="bar"></div>
+        <div class="shot"><img src="assets/zengli-scene-2.jpg" alt="运动员在起跑器上蹬地起跑" width="800" height="600" loading="lazy" decoding="async"></div>
+        <figcaption>
+          <span class="sno">02 / POWER</span>
+          <span class="st" data-edit-id="sc2-t">体能特训 · 高强度对抗</span>
+          <span class="sd" data-edit-id="sc2-d">以特警级体能标准设计间歇与爆发训练，短时间拉满团队状态。</span>
+        </figcaption>
+      </figure>
+      <figure class="scene reveal">
+        <div class="bar"></div>
+        <div class="shot"><img src="assets/zengli-scene-3.jpg" alt="团队围成一圈将手叠在一起" width="800" height="600" loading="lazy" decoding="async"></div>
+        <figcaption>
+          <span class="sno">03 / TEAM</span>
+          <span class="st" data-edit-id="sc3-t">团队凝聚 · 把散沙拧成绳</span>
+          <span class="sd" data-edit-id="sc3-d">用共同目标与身体协作，让成员在压力下建立真实信任。</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 带训企业 -->
+<section class="clients" id="clients">
+  <div class="wrap">
+    <div class="kicker reveal">BATTLE RECORD / 带训企业</div>
+    <h2 class="sec reveal"><span class="en">CLIENTS</span><span data-edit-id="sec-clients">服务过的企业</span></h2>
+    <div class="client-group reveal"><div class="g-name">房地产</div><div class="g-list" data-edit-id="cl1"><b>绿城集团</b>、<b>远洋地产</b>、<b>华邦地产</b></div></div>
+    <div class="client-group reveal"><div class="g-name">金融</div><div class="g-list" data-edit-id="cl2"><b>中宏保险</b>、<b>财通证券</b>、<b>南华期货</b></div></div>
+    <div class="client-group reveal"><div class="g-name">IT 行业</div><div class="g-list" data-edit-id="cl3"><b>士兰明芯</b>、<b>金蝶软件</b>、<b>边锋网络</b></div></div>
+    <div class="client-group reveal"><div class="g-name">制造业</div><div class="g-list" data-edit-id="cl4"><b>沁园水处理</b>、<b>久盛集团</b>、<b>华立集团</b></div></div>
+    <div class="client-group reveal"><div class="g-name">其它</div><div class="g-list" data-edit-id="cl5"><b>长沙地铁</b>、<b>亚克药业</b>、<b>金立手机</b>、<b>步步高手机</b>等大型知名企业</div></div>
+    <p class="client-total reveal" data-edit-id="client-total">累计培训人数近 <b>40000</b> 人，深受企业和学员的一致好评。</p>
+  </div>
+</section>
+
+<!-- 口号 -->
+<section class="quote">
+  <div class="wrap">
+    <div class="mark">“</div>
+    <p data-edit-id="quote">
+      不论在任何时间，任何地点，只有<span class="em">不断训练</span>，才能让生活更加充实，<br>个人更加自信，<span class="em">团队更加强大</span>！
+    </p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap"><span data-edit-id="footer">曾理 · 首席拓展培训师 &nbsp;|&nbsp; 本页面为个人简介展示</span></div>
+</footer>
+
+<!-- 内联编辑工具 -->
+<div class="edit-hotzone"><button class="edit-toggle" type="button" aria-label="切换编辑模式">编辑</button></div>
+
+<script>
+(function(){
+  var KEY = (document.documentElement.getAttribute('data-page')||'page') + '-edits:' + location.pathname;
+  var saved = null;
+  try{ saved = JSON.parse(localStorage.getItem(KEY) || 'null'); }catch(e){ saved = null; }
+  if(saved){
+    document.querySelectorAll('[data-edit-id]').forEach(function(el){
+      var v = saved[el.getAttribute('data-edit-id')];
+      if(v !== undefined) el.innerHTML = v;
+    });
+  }
+
+  var editing = false;
+  var panel = null;
+  function ensurePanel(){
+    if(panel) return panel;
+    panel = document.createElement('div');
+    panel.className = 'edit-panel';
+    var h = document.createElement('span');
+    h.className = 'hint'; h.textContent = '点击文字即可编辑 · E 切换 · Ctrl+S 保存';
+    var b = document.createElement('button');
+    b.type = 'button'; b.textContent = '导出 HTML';
+    b.addEventListener('click', exportHTML);
+    panel.appendChild(h); panel.appendChild(b);
+    document.body.appendChild(panel);
+    return panel;
+  }
+  function setEditing(on){
+    editing = on;
+    document.querySelectorAll('[data-edit-id]').forEach(function(el){ el.contentEditable = on ? 'true' : 'false'; });
+    document.body.classList.toggle('editing-mode', on);
+    ensurePanel().classList.toggle('show', on);
+  }
+  var toggle = document.querySelector('.edit-toggle');
+  if(toggle) toggle.addEventListener('click', function(e){ e.stopPropagation(); setEditing(!editing); });
+
+  function collect(){
+    var m = {};
+    document.querySelectorAll('[data-edit-id]').forEach(function(el){ m[el.getAttribute('data-edit-id')] = el.innerHTML; });
+    return m;
+  }
+  function save(){ localStorage.setItem(KEY, JSON.stringify(collect())); flash('已保存'); }
+  function exportHTML(){
+    save();
+    var clone = document.documentElement.cloneNode(true);
+    // 只清理运行时生成的浮层，保留 .edit-hotzone / .edit-toggle，导出文件仍可继续编辑
+    clone.querySelectorAll('.edit-panel,.edit-flash').forEach(function(n){ n.remove(); });
+    clone.querySelectorAll('[contenteditable]').forEach(function(n){ n.removeAttribute('contenteditable'); });
+    clone.classList.remove('editing-mode');
+    clone.setAttribute('data-edit-version', 'v' + Date.now());
+    var html = '<!DOCTYPE html>\n' + clone.outerHTML;
+    var url = URL.createObjectURL(new Blob([html], {type:'text/html;charset=utf-8'}));
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = '曾理-个人简介-导出.html';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    // 延后释放：立即 revoke 会取消下载
+    setTimeout(function(){ URL.revokeObjectURL(url); }, 60000);
+    flash('已导出');
+  }
+  function flash(msg){
+    var f = document.createElement('div');
+    f.className = 'edit-flash'; f.textContent = msg;
+    document.body.appendChild(f);
+    requestAnimationFrame(function(){ f.classList.add('show'); });
+    setTimeout(function(){ f.classList.remove('show'); setTimeout(function(){ f.remove(); }, 320); }, 1400);
+  }
+  document.addEventListener('keydown', function(e){
+    var inEdit = e.target && (e.target.isContentEditable || /INPUT|TEXTAREA/.test(e.target.tagName||''));
+    if(e.key === 'e' || e.key === 'E'){ if(!inEdit){ e.preventDefault(); setEditing(!editing); } }
+    if((e.metaKey || e.ctrlKey) && (e.key === 's' || e.key === 'S')){ e.preventDefault(); save(); }
+  });
+})();
+
+// 滚动浮现：IO 为主，同步扫描兜底 —— 不依赖 rAF，快速滚动 / 跳转 / 缩放都不会漏触发
+(function(){
+  var items = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+  if(!items.length) return;
+
+  function sweep(){
+    if(!items.length) return;
+    var vh = window.innerHeight || document.documentElement.clientHeight;
+    var line = vh * 0.92;
+    var hit = [];
+    // 先批量读，再批量写，避免反复强制重排
+    for(var i = 0; i < items.length; i++){
+      if(items[i].getBoundingClientRect().top < line) hit.push(i);
+    }
+    if(!hit.length) return;
+    for(var n = 0; n < hit.length; n++) items[hit[n]].classList.add('in');
+    items = items.filter(function(_, idx){ return hit.indexOf(idx) === -1; });
+  }
+
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting) en.target.classList.add('in'); });
+    }, {threshold:.12, rootMargin:'0px 0px -6% 0px'});
+    items.forEach(function(el){ io.observe(el); });
+  }
+
+  window.addEventListener('scroll', sweep, {passive:true});
+  window.addEventListener('resize', sweep);
+  window.addEventListener('load', sweep);
+  sweep();
+  setTimeout(sweep, 80);
+  setTimeout(sweep, 400);
+})();
+</script>
+</body>
+</html>

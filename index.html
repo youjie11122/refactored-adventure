@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page="coach-index">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>拓展培训师 · 教练简介</title>
+<meta name="description" content="两位拓展培训师的个人简介入口：曾理（硬核实战 · 特警出身）与刘思宇（方法论驱动 · 高级拓展培训师）。">
+<style>
+:root{
+  --bg:#eceef0; --panel:#ffffff;
+  --ink:#11161b; --body:#3b444d; --muted:#79838d; --line:#d8dde2;
+  --accent:#2f3d4a;
+  --zl-accent:#d9490f; --zl-steel:#2f3d4a;
+  --liu-accent:#2f6b5f;
+  --display:"Impact","Arial Black","Arial Narrow",sans-serif;
+  --mono:"Courier New",Consolas,monospace;
+  --serif:"Noto Serif SC","Songti SC","Source Han Serif SC",Georgia,serif;
+  --cjk:"PingFang SC","Microsoft YaHei","Source Han Sans SC","Noto Sans SC",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  background:var(--bg);color:var(--body);font-family:var(--cjk);
+  -webkit-font-smoothing:antialiased;position:relative;
+  display:flex;flex-direction:column;min-height:100%;
+}
+/* 网格底纹 */
+body::before{
+  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:
+    linear-gradient(rgba(47,61,74,.05) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(47,61,74,.05) 1px,transparent 1px);
+  background-size:44px 44px;
+  -webkit-mask-image:radial-gradient(900px 640px at 50% 0%,#000 0%,transparent 74%);
+  mask-image:radial-gradient(900px 640px at 50% 0%,#000 0%,transparent 74%);
+}
+.wrap{position:relative;z-index:1;width:100%;max-width:1000px;margin:0 auto;
+  padding:72px 26px 36px;flex:1;display:flex;flex-direction:column;justify-content:center}
+
+/* ---------- 页头 ---------- */
+.head{text-align:center;margin-bottom:46px}
+.kicker{
+  display:inline-flex;align-items:center;gap:12px;font-family:var(--mono);
+  font-size:11px;letter-spacing:4px;color:var(--muted);text-transform:uppercase;margin-bottom:18px;
+}
+.kicker::before,.kicker::after{content:"";width:28px;height:1px;background:var(--line)}
+h1{font-size:42px;font-weight:800;color:var(--ink);letter-spacing:2px;line-height:1.25}
+.sub{color:var(--muted);font-size:15px;margin-top:14px;letter-spacing:.5px}
+
+/* ---------- 卡片 ---------- */
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.card{
+  display:block;text-decoration:none;color:inherit;background:var(--panel);
+  border:1px solid var(--line);padding:12px;position:relative;
+  transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease;
+}
+.card:hover{transform:translateY(-5px)}
+.card .shot{overflow:hidden;background:#e4e7ea;aspect-ratio:4/5}
+.card .shot img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
+.card:hover .shot img{transform:scale(1.04)}
+.card .body{padding:18px 4px 6px}
+.card .name{font-size:26px;font-weight:800;color:var(--ink);letter-spacing:1px}
+.card .en{font-family:var(--mono);font-size:10px;letter-spacing:3px;color:var(--muted);
+  margin-top:6px;text-transform:uppercase}
+.card .role{font-size:14px;font-weight:700;margin-top:11px}
+.card .tag{font-size:13px;line-height:1.8;color:var(--muted);margin-top:9px}
+.card .go{display:inline-block;margin-top:18px;font-size:13px;font-weight:700;letter-spacing:1px}
+
+/* 曾理 —— 工业 / 战术 */
+.card-zl::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:8px;
+  background:repeating-linear-gradient(45deg,var(--zl-steel) 0 10px,var(--zl-accent) 10px 20px);
+}
+.card-zl .name{font-family:var(--display);font-size:31px;letter-spacing:3px}
+.card-zl .role{color:var(--zl-accent)}
+.card-zl .go{color:var(--zl-accent)}
+.card-zl:hover{border-color:var(--zl-accent);box-shadow:12px 12px 0 rgba(47,61,74,.16)}
+
+/* 刘思宇 —— 编辑 / 衬线 */
+.card-liu::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--liu-accent)}
+.card-liu .name{font-family:var(--serif);font-weight:600;letter-spacing:2px}
+.card-liu .role{color:var(--liu-accent)}
+.card-liu .go{color:var(--liu-accent)}
+.card-liu:hover{border-color:var(--liu-accent);box-shadow:12px 12px 0 rgba(47,107,95,.14)}
+
+/* ---------- 页脚 ---------- */
+.foot{text-align:center;color:var(--muted);font-size:12px;letter-spacing:1px;margin-top:46px}
+
+/* ---------- 动效 ---------- */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+}
+
+/* ---------- 响应式 ---------- */
+@media(max-width:760px){
+  .wrap{padding:54px 20px 30px}
+  h1{font-size:30px;letter-spacing:1px}
+  .head{margin-bottom:34px}
+  .cards{grid-template-columns:1fr;gap:20px}
+}
+
+/* ================= 编辑工具 ================= */
+.edit-hotzone{position:fixed;top:0;left:0;z-index:9999;width:84px;height:64px}
+.edit-toggle{
+  position:absolute;top:10px;left:10px;padding:7px 12px;font-size:12px;letter-spacing:1px;
+  background:var(--ink);color:#fff;border:0;cursor:pointer;
+  opacity:0;transition:opacity .2s;
+}
+.edit-hotzone:hover .edit-toggle,.edit-toggle:focus-visible{opacity:1}
+.edit-panel{
+  position:fixed;top:12px;left:12px;z-index:9998;display:none;align-items:center;gap:12px;
+  padding:8px 12px;background:var(--ink);border:1px solid var(--ink);
+  font-size:12px;color:#c9d1d8;
+}
+.edit-panel.show{display:flex}
+.edit-panel .hint{letter-spacing:1px}
+.edit-panel button{padding:5px 12px;font-size:12px;background:var(--accent);color:#fff;border:0;cursor:pointer;font-weight:700}
+.edit-flash{
+  position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(10px);z-index:9999;
+  background:var(--accent);color:#fff;padding:9px 18px;font-size:13px;font-weight:700;
+  opacity:0;transition:.3s;
+}
+.edit-flash.show{opacity:1;transform:translateX(-50%)}
+[data-edit-id]{outline:0;transition:outline-color .15s}
+body.editing-mode [data-edit-id]{outline:1px dashed rgba(47,61,74,.5);cursor:text}
+body.editing-mode [data-edit-id]:hover{outline-color:var(--accent)}
+/* 编辑模式下卡片不再跳转，否则点文字就跳走了 */
+body.editing-mode .card{pointer-events:none}
+body.editing-mode .card [data-edit-id]{pointer-events:auto}
+@media print{
+  .edit-hotzone,.edit-panel,.edit-flash{display:none!important}
+  .reveal{opacity:1!important;transform:none!important}
+  body::before{display:none}
+}
+</style>
+</head>
+<body>
+
+<main class="wrap">
+  <header class="head">
+    <div class="kicker reveal">TEAM BUILDING COACHES</div>
+    <h1 class="reveal" data-edit-id="idx-title">拓展培训师 · 教练简介</h1>
+    <p class="sub reveal" data-edit-id="idx-sub">两位教练，两种带队风格。点击卡片查看完整简介。</p>
+  </header>
+
+  <div class="cards">
+    <a class="card card-zl reveal" href="zengli.html">
+      <div class="shot">
+        <img src="assets/zengli-portrait.jpg" alt="曾理在活动现场持麦带训" width="900" height="1200" decoding="async" style="object-position:center 18%">
+      </div>
+      <div class="body">
+        <div class="name" data-edit-id="idx-zl-name">曾理</div>
+        <div class="en">ZENG LI</div>
+        <div class="role" data-edit-id="idx-zl-role">首席拓展培训师 · 硬核实战</div>
+        <p class="tag" data-edit-id="idx-zl-tag">特警出身、武术夺牌，用实战与体能把团队淬炼成一支能打硬仗的队伍。</p>
+        <span class="go">查看简介 →</span>
+      </div>
+    </a>
+
+    <a class="card card-liu reveal" href="liusiyu.html">
+      <div class="shot">
+        <img src="assets/liu-portrait.jpg" alt="刘思宇" width="900" height="900" decoding="async">
+      </div>
+      <div class="body">
+        <div class="name" data-edit-id="idx-liu-name">刘思宇</div>
+        <div class="en">LIU SIYU</div>
+        <div class="role" data-edit-id="idx-liu-role">高级拓展培训师 · 方法论驱动</div>
+        <p class="tag" data-edit-id="idx-liu-tag">7 年深耕团建培训，用系统方法论让团建从「走过场」变成真正落地的团队赋能。</p>
+        <span class="go">查看简介 →</span>
+      </div>
+    </a>
+  </div>
+
+  <footer class="foot"><span data-edit-id="idx-foot">拓展培训师个人简介 &nbsp;|&nbsp; 点击卡片查看完整介绍</span></footer>
+</main>
+
+<!-- 内联编辑工具 -->
+<div class="edit-hotzone"><button class="edit-toggle" type="button" aria-label="切换编辑模式">编辑</button></div>
+
+<script>
+(function(){
+  var KEY = (document.documentElement.getAttribute('data-page')||'page') + '-edits:' + location.pathname;
+  var saved = null;
+  try{ saved = JSON.parse(localStorage.getItem(KEY) || 'null'); }catch(e){ saved = null; }
+  if(saved){
+    document.querySelectorAll('[data-edit-id]').forEach(function(el){
+      var v = saved[el.getAttribute('data-edit-id')];
+      if(v !== undefined) el.innerHTML = v;
+    });
+  }
+
+  var editing = false;
+  var panel = null;
+  function ensurePanel(){
+    if(panel) return panel;
+    panel = document.createElement('div');
+    panel.className = 'edit-panel';
+    var h = document.createElement('span');
+    h.className = 'hint'; h.textContent = '点击文字即可编辑 · E 切换 · Ctrl+S 保存';
+    var b = document.createElement('button');
+    b.type = 'button'; b.textContent = '导出 HTML';
+    b.addEventListener('click', exportHTML);
+    panel.appendChild(h); panel.appendChild(b);
+    document.body.appendChild(panel);
+    return panel;
+  }
+  function setEditing(on){
+    editing = on;
+    document.querySelectorAll('[data-edit-id]').forEach(function(el){ el.contentEditable = on ? 'true' : 'false'; });
+    document.body.classList.toggle('editing-mode', on);
+    ensurePanel().classList.toggle('show', on);
+  }
+  var toggle = document.querySelector('.edit-toggle');
+  if(toggle) toggle.addEventListener('click', function(e){ e.stopPropagation(); setEditing(!editing); });
+
+  function collect(){
+    var m = {};
+    document.querySelectorAll('[data-edit-id]').forEach(function(el){ m[el.getAttribute('data-edit-id')] = el.innerHTML; });
+    return m;
+  }
+  function save(){ localStorage.setItem(KEY, JSON.stringify(collect())); flash('已保存'); }
+  function exportHTML(){
+    save();
+    var clone = document.documentElement.cloneNode(true);
+    // 只清理运行时生成的浮层，保留 .edit-hotzone / .edit-toggle，导出文件仍可继续编辑
+    clone.querySelectorAll('.edit-panel,.edit-flash').forEach(function(n){ n.remove(); });
+    clone.querySelectorAll('[contenteditable]').forEach(function(n){ n.removeAttribute('contenteditable'); });
+    clone.classList.remove('editing-mode');
+    clone.setAttribute('data-edit-version', 'v' + Date.now());
+    var html = '<!DOCTYPE html>\n' + clone.outerHTML;
+    var url = URL.createObjectURL(new Blob([html], {type:'text/html;charset=utf-8'}));
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = '教练简介-首页-导出.html';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    // 延后释放：立即 revoke 会取消下载
+    setTimeout(function(){ URL.revokeObjectURL(url); }, 60000);
+    flash('已导出');
+  }
+  function flash(msg){
+    var f = document.createElement('div');
+    f.className = 'edit-flash'; f.textContent = msg;
+    document.body.appendChild(f);
+    requestAnimationFrame(function(){ f.classList.add('show'); });
+    setTimeout(function(){ f.classList.remove('show'); setTimeout(function(){ f.remove(); }, 320); }, 1400);
+  }
+  document.addEventListener('keydown', function(e){
+    var inEdit = e.target && (e.target.isContentEditable || /INPUT|TEXTAREA/.test(e.target.tagName||''));
+    if(e.key === 'e' || e.key === 'E'){ if(!inEdit){ e.preventDefault(); setEditing(!editing); } }
+    if((e.metaKey || e.ctrlKey) && (e.key === 's' || e.key === 'S')){ e.preventDefault(); save(); }
+  });
+})();
+
+// 滚动浮现：IO 为主，同步扫描兜底 —— 不依赖 rAF，快速滚动 / 跳转 / 缩放都不会漏触发
+(function(){
+  var items = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+  if(!items.length) return;
+
+  function sweep(){
+    if(!items.length) return;
+    var vh = window.innerHeight || document.documentElement.clientHeight;
+    var line = vh * 0.92;
+    var hit = [];
+    // 先批量读，再批量写，避免反复强制重排
+    for(var i = 0; i < items.length; i++){
+      if(items[i].getBoundingClientRect().top < line) hit.push(i);
+    }
+    if(!hit.length) return;
+    for(var n = 0; n < hit.length; n++) items[hit[n]].classList.add('in');
+    items = items.filter(function(_, idx){ return hit.indexOf(idx) === -1; });
+  }
+
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting) en.target.classList.add('in'); });
+    }, {threshold:.12, rootMargin:'0px 0px -6% 0px'});
+    items.forEach(function(el){ io.observe(el); });
+  }
+
+  window.addEventListener('scroll', sweep, {passive:true});
+  window.addEventListener('resize', sweep);
+  window.addEventListener('load', sweep);
+  sweep();
+  setTimeout(sweep, 80);
+  setTimeout(sweep, 400);
+})();
+</script>
+</body>
+</html>
